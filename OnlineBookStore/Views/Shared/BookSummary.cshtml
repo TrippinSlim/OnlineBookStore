@@ -9,12 +9,17 @@
             </span>
         </h4>
     </div>
-
+    <div class="card-text p-1">
+        <ul>
+            <li>Publisher: @Model?.Supplier</li>
+            <li>Category: @Model?.Category</li>
+            <li>Description: @Model?.Description</li>
+        </ul>
+    </div>
     <form id="@Model?.BookID" asp-page="/Cart" method="post">
         <input type="hidden" asp-for="BookID" />
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
         <span class="card-text p-1">
-            @Model?.Description
             <button type="submit" class="btn btn-success btn-sm pull-right" style="float:right">
                 Add To Cart
             </button>
