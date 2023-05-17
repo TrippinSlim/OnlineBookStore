@@ -62,7 +62,7 @@ namespace OnlineBookStore.Models
                          Title = "Pokemon Special 64",
                          Description = "Variety of Pokemon",
                          Supplier = "NXB Kim Dong",
-                         Category = "Adventure,",
+                         Category = "Adventure",
                          Price = 40500
                      },
                      new Book
