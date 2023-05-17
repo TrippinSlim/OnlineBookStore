@@ -1,0 +1,15 @@
+version: "3"
+services:
+    onlinebookstore:
+        build: .
+        ports:
+           - "5000:5000"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Book
+        depends_on:
+            - sqlserver
+    sqlserver:
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            SA_PASSWORD: "MyDatabaseHideout3"
+            ACCEPT_EULA: "Y"
